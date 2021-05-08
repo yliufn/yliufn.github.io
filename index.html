@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>我的網頁(作業3)</title>
-  </head>
+<head>
+<title>劉彥廷(Liu,Yen-Ting)</title>
+
+<style>  
+p {  
+    	font-size: 20px;
+  	line-height: 2;
+  	letter-spacing: 1px;
+    	color: blue;  
+}
+#clock{
+color : red;
+}
+
+h1 {
+  	font-size: 50px;
+  	text-align: center;
+}
+
+#REF:hover{
+	color : red;
+}
+</style>
+
+<audio controls loop>
+      	<source src="bg.mp3">
+</audio>
+
+<link rel="icon" href="favicon.png">
+
+
+<p1>現在時間: <span id="clock"></span></p1>
+
+<script type="text/javascript">
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+var clocktext=""+(nmonth+1)+"-"+ndate+"-"+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+document.getElementById('clock').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+
+
+
+</head>
+
   <body>
-    <h1>
-      我是劉彥廷，高中是
-    <p>Click
-      <a href = "https://www2.ck.tp.edu.tw/">
-        建國中學
-      </a>
-    </p>
-      畢業的，而現在就讀
-    
-    <p>Click
-      <a href = "https://web.ee.ntu.edu.tw/">
-         台大電機系
-      </a>
-    </p>
-      ，
-      
-    </h1>
-    
-    
+	
+    	<h1>
+	劉彥廷的網站<img src="portrait.jpg" width="120" height="150" style="vertical-align:middle">
+	</h1>
+
+	<h2>
+	<p>
+      	進到這個網站的各位你們好，我是劉彥廷，也可以叫我Andy
+	</p>
+	<p>
+	我高中是
+      	<a href = "https://www2.ck.tp.edu.tw/" id="REF">建中</a>
+      	畢業的，而現在就讀
+      	<a href = "https://web.ee.ntu.edu.tw/" id="REF">台大電機系</a>
+	三年級。
+	</p>
+
+	<p>
+	我喜歡球類運動(
+	<a href = "https://www.nba.com/" id="REF">籃球</a>
+	跟羽球都還不錯，最近在系上的網球隊學習打網球)，也對
+	<a href = "https://www.nasa.gov/" id="REF">天文</a>
+	有些興趣
+	</p>
+	<p>最近上學通勤時會聽
+	<a href = "https://open.spotify.com/show/1GDk5wJkJb3r9KgNsUBj0J" id="REF">podcast</a>
+	，讓我在閒暇之餘，可以接觸一些國際的重大事件
+	</p>
+      	</h2>
+
    
   </body>
 </html>
